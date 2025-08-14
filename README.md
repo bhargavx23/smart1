@@ -1,3 +1,9 @@
+# Team Members:- 
+
+1.y.jaswanth
+2.p.Bhargav.S.S
+3.B.Hema Swarup
+
 # Smart Mirror Trading DApp on Aptos
 
 A decentralized application built on the Aptos blockchain that allows users to automate their trading by mirroring the strategies of successful traders.
