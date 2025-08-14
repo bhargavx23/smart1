@@ -188,7 +188,7 @@ export function MirrorTrading() {
 
   return (
     <div className="space-y-6">
-      <Card>
+      <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm">
         <CardHeader>
           <CardTitle>Mirror Trading</CardTitle>
           <CardDescription>Automatically copy trades from successful traders</CardDescription>
@@ -220,7 +220,7 @@ export function MirrorTrading() {
       </Card>
 
       {isFollowing && (
-        <Card>
+        <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm">
           <CardHeader>
             <CardTitle>Trading Rules</CardTitle>
             <CardDescription>Configure your mirror trading preferences</CardDescription>
@@ -277,7 +277,7 @@ export function MirrorTrading() {
         </Card>
       )}
 
-      <Card>
+      <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm">
         <CardHeader>
           <CardTitle>Recent Trades</CardTitle>
           <CardDescription>Latest mirrored trades</CardDescription>

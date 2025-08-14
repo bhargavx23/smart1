@@ -1,40 +1,68 @@
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { MirrorTradingFinal } from "./components/MirrorTradingFinal";
+import TestComponent from "./components/TestComponent";
 import { WalletSelector } from "./components/WalletSelector";
 import { Card } from "./components/ui/card";
+import { ThemeProvider } from "./components/ThemeProvider";
+import { ChatBot } from "./components/ChatBot";
+import { ArrowUpDown } from "lucide-react"; // <-- Add this import
 
 function App() {
   const { connected } = useWallet();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <Header />
-
-      <main className="container mx-auto px-4 py-8">
-        {!connected ? (
-          <div className="flex flex-col items-center justify-center min-h-[60vh]">
-            <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm p-8 text-center max-w-md">
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h2 className="text-2xl font-bold text-white mb-2">Smart Wallet Mirror Trading</h2>
-                <p className="text-gray-400 mb-6">
-                  Connect your wallet to start following successful traders and automate your trading strategy
-                </p>
-              </div>
-              <WalletSelector />
-            </Card>
+    <ThemeProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50 dark:bg-black relative overflow-hidden">
+          {/* Motion Background Elements */}
+          <div className="motion-bg">
+            <div className="motion-element"></div>
+            <div className="motion-element"></div>
+            <div className="motion-element"></div>
+            <div className="motion-element"></div>
           </div>
-        ) : (
-          <MirrorTradingFinal />
-        )}
-      </main>
-    </div>
+
+          <Header />
+
+          <main className="container mx-auto px-4 py-8 relative z-10">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  !connected ? (
+                    <div className="flex flex-col items-center justify-center min-h-[60vh]">
+                      <Card className="bg-white/80 dark:bg-white/20 backdrop-blur-sm p-8 text-center max-w-md border border-gray-200 dark:border-white/20 shadow-2xl rounded-2xl">
+                        <div className="mb-6">
+                          <div className="w-20 h-20 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <ArrowUpDown className="w-10 h-10 text-white" />
+                          </div>
+                          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
+                            Smart Mirror Trading
+                          </h2>
+                          <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+                            Connect your wallet to start following successful traders and automate your trading strategy
+                            with AI-powered insights
+                          </p>
+                        </div>
+                        <WalletSelector />
+                      </Card>
+                    </div>
+                  ) : (
+                    <MirrorTradingFinal />
+                  )
+                }
+              />
+              <Route path="/live-trading" element={<TestComponent />} />
+            </Routes>
+          </main>
+          <ChatBot />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
 export default App;
+// ...existing code...

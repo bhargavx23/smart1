@@ -8,7 +8,7 @@ import { Label } from "./ui/label";
 import { toast } from "./ui/use-toast";
 
 const APTOS_NODE_URL = "https://fullnode.testnet.aptoslabs.com";
-const MIRROR_TRADING_ADDRESS = "0x1234567890abcdef"; // Replace with actual contract address
+const MIRROR_TRADING_ADDRESS = "0x2f86cffa28b74ff5b04142c5c328368a6ce4763ae70137022a393d84a4ab3003"; // Replace with actual contract address
 
 const client = new AptosClient(APTOS_NODE_URL);
 

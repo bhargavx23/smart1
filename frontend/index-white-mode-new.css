@@ -1,0 +1,153 @@
+/* New White Mode CSS - Black Cards with White Text */
+
+/* Import the new white mode styles */
+@import url("./styles/white-mode-black-cards.css");
+
+/* Additional white mode specific styles */
+body.white-mode {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  min-height: 100vh;
+}
+
+/* Ensure all text is properly styled */
+.white-mode * {
+  color: #ffffff;
+}
+
+.white-mode .text-gray-400,
+.white-mode .text-gray-500,
+.white-mode .text-gray-600 {
+  color: #b0b0b0 !important;
+}
+
+.white-mode .text-gray-700,
+.white-mode .text-gray-800,
+.white-mode .text-gray-900 {
+  color: #ffffff !important;
+}
+
+/* Override any remaining light mode styles */
+.white-mode .bg-white {
+  background-color: #000000 !important;
+}
+
+.white-mode .bg-gray-50 {
+  background-color: #1a1a1a !important;
+}
+
+.white-mode .bg-gray-100 {
+  background-color: #2a2a2a !important;
+}
+
+.white-mode .bg-gray-200 {
+  background-color: #3a3a3a !important;
+}
+
+/* Ensure proper contrast for all elements */
+.white-mode .text-primary {
+  color: #ffffff !important;
+}
+
+.white-mode .text-secondary {
+  color: #e0e0e0 !important;
+}
+
+.white-mode .text-tertiary {
+  color: #b0b0b0 !important;
+}
+
+/* Border styling */
+.white-mode .border-gray-200,
+.white-mode .border-gray-300 {
+  border-color: #444444 !important;
+}
+
+/* Shadow effects */
+.white-mode .shadow-lg {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.white-mode .shadow-xl {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Hover effects */
+.white-mode .hover\:shadow-lg:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Gradient backgrounds */
+.white-mode .bg-gradient-to-r {
+  background: linear-gradient(to right, #000000, #1a1a1a) !important;
+}
+
+/* Special styling for components */
+.white-mode .component-card {
+  background: #000000;
+  border: 1px solid #333333;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.white-mode .component-header {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 16px;
+}
+
+.white-mode .component-content {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Ensure links are visible */
+.white-mode a {
+  color: #3b82f6;
+}
+
+.white-mode a:hover {
+  color: #2563eb;
+}
+
+/* Placeholder styling - Dominant color */
+.white-mode input::placeholder,
+.white-mode textarea::placeholder {
+  color: #3b82f6;
+  opacity: 0.7;
+}
+
+.white-mode input::-webkit-input-placeholder,
+.white-mode textarea::-webkit-input-placeholder {
+  color: #3b82f6;
+  opacity: 0.7;
+}
+
+.white-mode input::-moz-placeholder,
+.white-mode textarea::-moz-placeholder {
+  color: #3b82f6;
+  opacity: 0.7;
+}
+
+.white-mode input:-ms-input-placeholder,
+.white-mode textarea:-ms-input-placeholder {
+  color: #3b82f6;
+  opacity: 0.7;
+}
+
+/* Status indicators */
+.white-mode .status-active {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.white-mode .status-inactive {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.white-mode .status-pending {
+  background-color: #f59e0b;
+  color: #ffffff;
+}

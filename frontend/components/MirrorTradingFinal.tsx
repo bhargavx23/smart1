@@ -9,7 +9,7 @@ import { toast } from "./ui/use-toast";
 import { TrendingUp, Wallet, Settings, Zap } from "lucide-react";
 
 const APTOS_NODE_URL = "https://fullnode.testnet.aptoslabs.com";
-const MIRROR_TRADING_ADDRESS = "0x0000000000000000000000000000000000000000000000001234567890abcdef"; // Properly padded 64 hex chars
+const MIRROR_TRADING_ADDRESS = "0x2f86cffa28b74ff5b04142c5c328368a6ce4763ae70137022a393d84a4ab3003"; // Properly padded 64 hex chars
 
 const client = new AptosClient(APTOS_NODE_URL);
 
@@ -111,7 +111,7 @@ export function MirrorTradingFinal() {
   };
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
+    <div className="space-y-6 max-w-6xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
           Smart Wallet Mirror Trading
@@ -119,8 +119,8 @@ export function MirrorTradingFinal() {
         <p className="text-gray-400">Automate your trading by following successful traders</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-blue-500/20">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-blue-400">
               <Wallet className="h-5 w-5" />
@@ -230,7 +230,7 @@ export function MirrorTradingFinal() {
         </Card>
       </div>
 
-      <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm">
+      <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-green-500/20">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-400">
             <Zap className="h-5 w-5" />

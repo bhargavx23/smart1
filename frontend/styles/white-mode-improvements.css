@@ -1,0 +1,143 @@
+/* White Mode Improvements - Dominant Text & Wider Cards */
+
+/* Enhanced white mode variables for dominant text */
+:root {
+  /* Light mode improvements */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 5%;
+  --card: 0 0% 98%;
+  --card-foreground: 0 0% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 10%;
+  --primary: 0 0% 15%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 15%;
+  --muted: 0 0% 94%;
+  --muted-foreground: 0 0% 30%;
+  --accent: 0 0% 92%;
+  --accent-foreground: 0 0% 15%;
+  --destructive: 0 0% 20%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 85%;
+  --input: 0 0% 96%;
+  --ring: 0 0% 20%;
+}
+
+/* Dark mode remains unchanged */
+.dark {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 5%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 90%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 0% 100%;
+  --destructive-foreground: 0 0% 0%;
+  --border: 0 0% 20%;
+  --input: 0 0% 10%;
+  --ring: 0 0% 100%;
+}
+
+/* Wider cards with improved spacing */
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced text hierarchy for white mode */
+.dark .text-foreground {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+.dark .text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+/* Improved card styling for white mode */
+.dark .card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Better spacing between elements */
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Enhanced button styling for white mode */
+.dark .button {
+  transition: all 0.2s ease;
+}
+
+.dark .button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Improved input styling */
+.dark input {
+  background-color: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+/* Better label styling */
+.dark label {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+/* Enhanced grid layout for wider cards */
+.grid-container {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    margin: 0 0.5rem 1.5rem;
+  }
+
+  .grid-container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Subtle animations for white mode */
+.dark .motion-element {
+  background: rgba(0, 0, 0, 0.03);
+  animation: float-light 20s infinite ease-in-out;
+}
+
+@keyframes float-light {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-50px) rotate(180deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+    opacity: 0.5;
+  }
+}
